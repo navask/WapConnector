@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uiManifest>
+  <!--HybridCloud Management-->
+  <extension name="HybridCloudAdminExtension"
+             baseUri="~/Content/HybridCloudAdmin">
+    <scripts>
+      <script src="~/Scripts/HybridCloud.Controller.js" />
+      <script src="~/Scripts/HybridCloud.AzureSettingsTab.js" />
+      <script src="~/Scripts/HybridCloud.RackspaceSettingsTab.js" />
+      <script src="~/HybridCloudAdminExtension.js" />
+
+      <!--Self registration-->
+      <script src="~/extensions.data.js" />
+    </scripts>
+    <stylesheets>
+      <stylesheet src="~/Styles/HybridCloudAdmin.css"/>
+      <stylesheet src="~/Styles/HybridCloudControls.css"/>
+    </stylesheets>
+    <templates>
+      <template name="azureSettingsTab"
+                src="~/Templates/Tabs/AzureSettingsTab.html" />
+      <template name="rackspaceSettingsTab"
+                src="~/Templates/Tabs/RackspaceSettingsTab.html" />
+    </templates>
+  </extension>
+</uiManifest>

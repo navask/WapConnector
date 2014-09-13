@@ -1,0 +1,133 @@
+﻿<div id="sb-qc-topic-container">
+    <div class="drawer-form-item">
+        <label for="vm-name">DNS name</label>
+
+        <input type="text" data-val-remote-additionalfields="dnsName,subscriptionIdForDNSCheck" data-val-remote-url="Iaas/IsDNSAvailable" data-val-remote="The DNS name that you specified is already in use." data-val-length-max="15" data-val-length-min="3" data-val-length="The DNS name must contain between {:min:} and {:max:} characters." data-val-required="A DNS name is needed." data-val="true" name="dnsName" id="vm-name" class="fx-textbox fx-validation fx-editablecontrol fx-editablecontrol-edited fx-validation-required-valid fx-validation-length-valid fx-validation-dnsNameShouldNotExistInSubscription-valid fx-validation-remote-valid fx-validation-group-valid fx-validation-valid fx-validation-deferred-valid" data-val-dnsnameshouldnotexistinsubscription="A cloud service with the specified name already exists in one of your subscriptions.">
+
+        <input class="fx-textbox fx-validation fx-editablecontrol" id="vm-name" name="dnsName" data-val="true" type="text">
+        <div class="drawer-form-suffix">.cloudapp.net</div>
+    </div>
+
+    <div class="drawer-form-item vm-columns clearfix" style="margin-top:12px !important">
+        <div class="vm-image-container">
+            <label for="vm-image-wazSelect">Image</label>
+            <div id="vm-image">
+                <select class="waz-dropdown" id="vm-image-wazSelect">
+                    <option value="WindowsServer2012R2Datacenter">Windows Server 2012 R2 Datacenter</option>
+                    <option value="WindowsServer2012Datacenter">Windows Server 2012 Datacenter</option>
+                    <!--<option value="0__Image__a699494373c04fc0bc8f2bb1389d6106__Win2K8R2SP1-Datacenter-201408.01-en.us-127GB.vhd">Windows Server 2008 R2 SP1</option>
+                    <option value="0__Image__b4590d9e3ed742e4a1d46e5424aa335e__SUSE-Linux-Enterprise-Server-11-SP3-v203">SUSE Linux Enterprise Server 11 SP3</option>
+                    <option value="0__Image__b4590d9e3ed742e4a1d46e5424aa335e__SUSE-Linux-Enterprise-Server-11-SP3-Prio-v203">SUSE Linux Enterprise Server 11 SP3 (Premium Image)</option>
+                    <option value="0__Image__b4590d9e3ed742e4a1d46e5424aa335e__SUSE-Linux-Enterprise-Server-11-SP3-SAP-CAL-v103">SUSE Linux Enterprise Server 11 SP3 for SAP Cloud Appliance Library</option>
+                    <option value="0__Image__b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-12_04_5-LTS-amd64-server-20140829.2-en-us-30GB">Ubuntu Server 12.04 LTS</option>
+                    <option value="0__Image__b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04-LTS-amd64-server-20140724-en-us-30GB">Ubuntu Server 14.04 LTS</option>
+                    <option value="0__Image__5112500ae3b842c8b9c604889f8753c3__OpenLogic-CentOS-65-20140606">OpenLogic</option>
+                    <option value="0__Image__c290a6b031d841e09f2da759bbabe71f__Oracle-Linux-6">Oracle Linux 6.4.0.0.0</option>
+                    <option value="0__Image__3422a428aaf14529884165693cbb90d3__DreamFactory_1.6.10-3_-_Ubuntu_14.04">DreamFactory 1.6</option>
+                    <option value="0__Image__3422a428aaf14529884165693cbb90d3__eXo_Platform_Express_4.0.6-4_-_Ubuntu_14.04">eXo Platform Express 4</option>
+                    <option value="More images...">More images...</option>-->
+                </select>
+            </div>
+        </div>
+        <div class="vm-size-container">
+            <label for="vm-quick-size">Size</label>
+            <select id="vm-quick-size" style="display: inline-block;">
+                <!--<option data-group-index="1" data-index="0">A0 (shared core, 768 MB memory)</option>
+                <option data-group-index="1" data-index="1">A1 (1 core, 1.75 GB memory)</option>
+                <option data-group-index="1" data-index="2">A2 (2 cores, 3.5 GB memory)</option>
+                <option data-group-index="1" data-index="3">A3 (4 cores, 7 GB memory)</option>
+                <option data-group-index="1" data-index="4">A4 (8 cores, 14 GB memory)</option>-->
+                <option data-group-index="1" data-index="5" value="A5">A5 (2 cores, 14 GB memory)</option>
+                <option data-group-index="1" data-index="6" value="A6">A6 (4 cores, 28 GB memory)</option>
+                <option data-group-index="1" data-index="7" value="A7">A7 (8 cores, 56 GB memory)</option>
+                <option data-group-index="1" data-index="8" value="A8">A8 (8 cores, 56 GB memory)</option>
+                <option data-group-index="1" data-index="9" value="A9">A9 (16 cores, 112 GB memory)</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="drawer-form-item vm-drawer-windows-username" style="margin-top:12px !important">
+        <label for="vm-quick-username">User Name</label>
+        <input class="fx-textbox fx-validation fx-editablecontrol" id="vm-quick-username" data-val="true" data-val-required="A user name is required." type="text">
+    </div>
+
+    <div class="drawer-form-item vm-columns clearfix vm-drawer-password" style="margin-top:12px !important">
+
+        <div class="vm-password-container">
+            <label for="vm-quickAddPassword">New password</label>
+
+            <input class="fx-textbox fx-validation fx-editablecontrol" id="vm-quickAddPassword" name="password" data-val-remote="The password you provided is too common." data-val-remote-url="Iaas/IsValidPassword" data-val="true" type="password">
+        </div> <div class="vm-confirmpassword-container">
+
+            <label for="vm-quickAddConfirmpassword">Confirm</label>
+
+            <input class="fx-textbox fx-validation fx-editablecontrol" id="vm-quickAddConfirmpassword" data-val="true" type="password">
+
+        </div>
+
+    </div>
+
+    <div class="drawer-form-item vm-columns clearfix vm-drawer-locationAndSubscription" style="margin-top:12px !important;">
+        <div class="">
+            <div style="display:inline; float:left">
+                <label for="vm-quickAddLocation">Region</label>
+                <!--<label id="vm-lbl-location">East Asia</label>-->
+                <select class="fx-selectbox fx-validation fx-editablecontrol" style="display: inline; width:189%" id="vm-quickAddLocation" data-val="true" data-val-required="Location is a required field">
+                    <option data-index="0" data-group-index="1" value="East Asia">East Asia</option>
+                    <option data-index="1" data-group-index="1" value="East US">East US</option>
+                    <!--<option data-index="2" data-group-index="1">Central US</option>
+                    <option data-index="3" data-group-index="1">South Central US</option>
+                    <option data-index="4" data-group-index="1">West US</option>
+                    <option data-index="5" data-group-index="1">North Europe</option>
+                    <option data-index="6" data-group-index="1">West Europe</option>
+                    <option data-index="7" data-group-index="1">East Asia</option>
+                    <option data-index="8" data-group-index="1">Southeast Asia</option>
+                    <option data-index="9" data-group-index="1">Japan West</option>-->
+                </select>
+            </div>
+            <div style="display:inline; float:left; margin-left:80px;">
+                <label for="vm-quickAddProvider">Provider</label>
+                <!--<label id="vm-lbl-location">East Asia</label>-->
+                <select class="fx-selectbox fx-validation fx-editablecontrol" style="display: inline-block; width:168%" id="vm-provider" data-val="true" data-val-required="Location is a required field">
+
+                    <option data-index="0" data-group-index="1">Azure</option>
+                    <option data-index="1" data-group-index="1">Rackspace</option>
+                    <!--<option data-index="2" data-group-index="1">Central US</option>
+                    <option data-index="3" data-group-index="1">South Central US</option>
+                    <option data-index="4" data-group-index="1">West US</option>
+                    <option data-index="5" data-group-index="1">North Europe</option>
+                    <option data-index="6" data-group-index="1">West Europe</option>
+                    <option data-index="7" data-group-index="1">East Asia</option>
+                    <option data-index="8" data-group-index="1">Southeast Asia</option>
+                    <option data-index="9" data-group-index="1">Japan West</option>-->
+                </select>
+            </div>
+        </div>
+        <div style="display: none;" class="vm-subscription-container">
+            <label style="display: none;" for="vm-quickAddSubscription">Subscription</label> <select class="fx-selectbox fx-validation fx-editablecontrol" style="display: none;" id="vm-quickAddSubscription" data-val="true">
+                <optgroup label="Subscriptions">
+                    <option data-index="0" data-group-index="0">Visual Studio Premium with MSDN</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+    <div class="drawer-form-item" style="margin-top:14px">
+        <label for="hw-qc-share-comment" id="errorVMCreation" style="color:yellow; visibility:hidden; width: 550px; text-transform:none"></label>
+        <img id="vm-loader" style="display:none" src="http://www.mytreedb.com/uploads/mytreedb/loader/ajax_loader_blue_32.gif" />
+    </div>
+    <!--<div class="drawer-form-item">
+        <label for="hw-qc-share-comment">Note: Following is just a dummy form for example purpose</label>
+        <label for="hw-qc-share-comment">This does not do anything</label>
+    </div>-->
+    <!--<div class="drawer-form-item">
+        <label for="hw-qc-share-name">Share Name</label>
+        <input id="hw-qc-share-name" name="shareName" type="text" data-val="true" />
+    </div>
+
+    <div class="drawer-form-item">
+        <label for="hw-qc-server-name">Share Name</label>
+         <select id="hw-qc-share-server" name="selectedNamespaceName" data-fxcontroltype="fxDropdown"></select>
+    </div>-->
+</div>
+

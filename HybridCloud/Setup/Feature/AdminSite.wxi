@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <!-- Source Locations -->
+  <?ifndef AdminExtensionRoot ?>
+  <?define AdminExtensionRoot="..\AdminExtension" ?>  
+  <?endif?>
+  
+  <?ifndef AdminExtensionTargetDir ?>
+  <?define AdminExtensionTargetDir="$(var.HybridCloud.AdminExtension.TargetDir)" ?>
+  <?endif?>
+  
+  <DirectoryRef Id="AdminSiteBinDir">
+    <Component Id="A_Microsoft.WAP.ResourceProvider.HybridCloud.AdminExtension.dll"
+               Guid="{430E9349-1142-4F2F-9EB1-B4D9B087BE5E}">
+      <File Id="A_Microsoft.WAP.ResourceProvider.HybridCloud.AdminExtension.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminExtension.dll" />
+    </Component>
+    <Component Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll"
+               Guid="{AEC31E4F-1D64-4B37-B611-18BA9D16D4A8}">
+      <File Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll" />
+    </Component>
+    <Component Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common.dll"
+               Guid="{90F44EEE-9C9A-465A-8F48-CF57F9EC3F56}">
+      <File Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common.dll" />
+    </Component>
+    <Component Id="A_Microsoft.WindowsAzurePack.ResourceProvider.dll"
+               Guid="{691F8E74-A5F0-442A-92BE-B648D1A2B96D}">
+      <File Id="A_Microsoft.WindowsAzurePack.ResourceProvider.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.dll" />
+    </Component>
+  </DirectoryRef>
+  <DirectoryRef Id="AdminSiteContentExtDir">
+    <Component Id="A_extensions.data.js"
+               Guid="{1422B3FA-6140-4D08-81ED-14055A7AACBB}">
+      <File Id="A_extensions.data.js"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Content\extensions.data.js" />
+    </Component>
+    <Component Id="A_HybridCloudAdminExtension.js"
+               Guid="{821EF1B7-E509-40C0-97DE-E1AA58E01085}">
+      <File Id="A_HybridCloudAdminExtension.js"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Content\HybridCloudAdminExtension.js" />
+    </Component>
+    <Component Id="A_testteam.png"
+               Guid="{085379A1-DD17-4D0D-B9B3-C43F75BC78E2}">
+      <File Id="A_testteam.png"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Content\testteam.png" />
+    </Component>
+    <Directory Id="A_Images"
+               Name="Images">
+      <Component Id="A_quickstart.png"
+                 Guid="{BE3E67F1-DAF6-48BD-82F6-02C49E32F2D1}">
+        <File Id="A_quickstart.png"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Images\quickstart.png" />
+      </Component>
+      <Component Id="A_quickstart_connectto.png"
+                 Guid="{8E98C071-A934-413A-B80C-0C9B341301C6}">
+        <File Id="A_quickstart_connectto.png"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Images\quickstart_connectto.png" />
+      </Component>
+    </Directory>
+    <Directory Id="A_Scripts"
+               Name="Scripts">
+      <Component Id="A_HybridCloud.Controller.js"
+                 Guid="{EB5C7555-8B23-4649-A7CC-B0F8E4FA1F52}">
+        <File Id="A_HybridCloud.Controller.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HybridCloud.Controller.js" />
+      </Component>
+      <Component Id="A_HybridCloud.AzureSettingsTab.js"
+                 Guid="{CC2E7B2E-3CBA-40E7-8F4E-2AECC0D23C74}">
+        <File Id="A_HybridCloud.AzureSettingsTab.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HybridCloud.AzureSettingsTab.js" />
+      </Component>
+      <Component Id="A_HybridCloud.RackspaceSettingsTab.js"
+                 Guid="{841E6FF4-28A4-43C1-85B2-74E237239E38}">
+        <File Id="A_HybridCloud.RackspaceSettingsTab.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HybridCloud.RackspaceSettingsTab.js" />
+      </Component>
+    </Directory>
+    <Directory Id="A_Styles"
+               Name="Styles">
+      <Component Id="A_HybridCloudAdmin.css"
+                 Guid="{A7D89E16-A565-435B-9B46-E28BF9EBE1F5}">
+        <File Id="A_HybridCloudAdmin.css"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Styles\HybridCloudAdmin.css" />
+      </Component>
+      <Component Id="A_HybridCloudControls.css"
+                 Guid="{6C310CD2-D5BE-4CF3-97BB-C07615D24A14}">
+        <File Id="A_HybridCloudControls.css"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Styles\HybridCloudControls.css" />
+      </Component>
+    </Directory>
+    <Directory Id="A_Templates"
+               Name="Templates">
+      <Directory Id="A_Tabs"
+                 Name="Tabs">
+        <Component Id="A_AzureSettingsTab.html"
+                   Guid="{F3069569-D695-4755-BC95-669EF21323DC}">
+          <File Id="A_AzureSettingsTab.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\AzureSettingsTab.html" />
+        </Component>
+        <Component Id="A_ContorlsTab.html"
+                   Guid="{83BC26ED-7A00-4CD1-A7B9-C4D9D181907C}">
+          <File Id="A_ContorlsTab.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\RackspaceSettingsTab.html" />
+        </Component>
+      </Directory>
+    </Directory>    
+  </DirectoryRef>
+  <DirectoryRef Id="AdminSiteManifestsDir">
+    <Component Id="A_HybridCloudAdminUiManifest.xml"
+               Guid="{FE2E5FBF-C3A0-4402-B08C-357847FE3B4C}">
+      <File Id="A_HybridCloudAdminUiManifest.xml"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Manifests\HybridCloudAdminUiManifest.xml" />
+    </Component>
+  </DirectoryRef>
+  <DirectoryRef Id="AdminSiteViewsDir">   
+      <Directory Id="A_ServiceOffer" Name="ServiceOffer">
+        <Component Id="A_HybridCloudOffer.cshtml" Guid="{068988f1-0b2a-443b-a599-fd37bf88cb33}">
+          <File Id="A_HybridCloudOffer.cshtml"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Views\ServiceOffer\HybridCloudOffer.cshtml" />
+        </Component>
+      </Directory>
+   </DirectoryRef>
+  <ComponentGroup Id="AdminSiteContent">
+    <ComponentRef Id="A_Microsoft.WAP.ResourceProvider.HybridCloud.AdminExtension.dll" />
+    <ComponentRef Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll" />
+    <ComponentRef Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common.dll" />
+    <ComponentRef Id="A_Microsoft.WindowsAzurePack.ResourceProvider.dll" />
+    <ComponentRef Id="A_extensions.data.js" />
+    <ComponentRef Id="A_HybridCloudAdminExtension.js" />
+    <ComponentRef Id="A_testteam.png" />
+    <ComponentRef Id="A_quickstart.png" />
+    <ComponentRef Id="A_quickstart_connectto.png" />
+    <ComponentRef Id="A_HybridCloud.Controller.js" />
+    <ComponentRef Id="A_HybridCloud.AzureSettingsTab.js" />
+    <ComponentRef Id="A_HybridCloud.RackspaceSettingsTab.js" />
+    <ComponentRef Id="A_HybridCloudAdmin.css" />
+    <ComponentRef Id="A_HybridCloudControls.css" />
+    <ComponentRef Id="A_AzureSettingsTab.html" />
+    <ComponentRef Id="A_ContorlsTab.html" />
+    <ComponentRef Id="A_HybridCloudAdminUiManifest.xml" />
+    <ComponentRef Id="A_HybridCloudOffer.cshtml" />
+  </ComponentGroup>
+</Include>
