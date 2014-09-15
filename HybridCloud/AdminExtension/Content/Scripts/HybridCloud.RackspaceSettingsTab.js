@@ -353,7 +353,7 @@
     }
 
     global.HybridCloudAdminExtension = global.HybridCloudAdminExtension || {};
-    global.HybridCloudAdminExtension.RackspaceControlsTab = {
+    global.HybridCloudAdminExtension.RackspaceSettingsTab = {
         loadTab: loadTab,
         cleanUp: cleanUp
     };

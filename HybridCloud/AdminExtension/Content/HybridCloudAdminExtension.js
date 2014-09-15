@@ -26,7 +26,7 @@
 
 
     function loadAzureSettingsTab(extension, renderArea, renderData) {
-        global.HybridCloudAdminExtension.AzureSettingsTab.loadTab(renderData, renderArea);
+      global.HybridCloudAdminExtension.AzureSettingsTab.loadTab(renderData, renderArea);
     }
 
     function loadRackspaceSettingsTab(extension, renderArea, renderData) {

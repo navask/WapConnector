@@ -115,9 +115,9 @@
                 KeyPath="yes"
                 Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\AzureSettingsTab.html" />
         </Component>
-        <Component Id="A_ContorlsTab.html"
+        <Component Id="A_RackspaceSettingsTab.html"
                    Guid="{83BC26ED-7A00-4CD1-A7B9-C4D9D181907C}">
-          <File Id="A_ContorlsTab.html"
+          <File Id="A_RackspaceSettingsTab.html"
                 KeyPath="yes"
                 Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\RackspaceSettingsTab.html" />
         </Component>
@@ -157,7 +157,7 @@
     <ComponentRef Id="A_HybridCloudAdmin.css" />
     <ComponentRef Id="A_HybridCloudControls.css" />
     <ComponentRef Id="A_AzureSettingsTab.html" />
-    <ComponentRef Id="A_ContorlsTab.html" />
+    <ComponentRef Id="A_RackspaceSettingsTab.html" />
     <ComponentRef Id="A_HybridCloudAdminUiManifest.xml" />
     <ComponentRef Id="A_HybridCloudOffer.cshtml" />
   </ComponentGroup>
