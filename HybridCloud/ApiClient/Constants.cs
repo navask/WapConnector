@@ -4,9 +4,9 @@
 
 namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient
 {
-    internal static class Constants
+    public static class Constants
     {
-        internal static class DataContractNamespaces
+        public static class DataContractNamespaces
         {
             public const string Default = "http://schemas.microsoft.com/windowsazure";
         }

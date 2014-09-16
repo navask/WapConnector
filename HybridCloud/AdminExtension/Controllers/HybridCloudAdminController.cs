@@ -14,7 +14,8 @@ using Microsoft.Azure.Portal.Configuration;
 using Microsoft.WindowsAzurePack.ResourceProvider.DataContracts;
 using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminExtension.Models;
 using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient;
-using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.DataContracts;
+using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminApiClient;
+using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminApiClient.DataContracts;
 using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common;
 
 
@@ -120,7 +121,7 @@ namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminExtension
                                {
                                    new ResourceProviderVerificationTest()
                                    {
-                                       TestUri = new Uri(HybridCloudAdminController.adminAPIUri + HybridCloudClient.AdminSettings),
+                                       TestUri = new Uri(HybridCloudAdminController.adminAPIUri + HybridCloudAdminClient.AdminSettings),
                                        IsAdmin = true
                                    }
                                };
@@ -155,46 +156,6 @@ namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminExtension
 
             return this.Json(newSettings);
         }
-
-        /// <summary>
-        /// Gets all File Servers.
-        /// </summary>
-        [HttpPost]
-        [ActionName("FileServers")]
-        public async Task<JsonResult> GetAllFileServers()
-        {
-            try
-            {
-                var fileServers = await ClientFactory.HybridCloudClient.GetFileServerListAsync();
-                var fileServerModel = fileServers.Select(d => new FileServerModel(d)).ToList();
-                return this.JsonDataSet(fileServerModel);
-            }
-            catch (HttpRequestException)
-            {
-                // Returns an empty collection if the HTTP request to the API fails
-                return this.JsonDataSet(new FileServerList());
-            }
-        }
-
-        /// <summary>
-        /// Gets all Products.
-        /// </summary>
-        [HttpPost]
-        [ActionName("Products")]
-        public async Task<JsonResult> GetAllProducts()
-        {
-            try
-            {
-                var productNames = await ClientFactory.HybridCloudClient.GetProductListAsync();
-                var productModels = productNames.Select(d => new ProductModel(d)).ToList();
-                return this.JsonDataSet(productModels);
-            }
-            catch (HttpRequestException)
-            {
-                // Returns an empty collection if the HTTP request to the API fails 
-                return this.JsonDataSet(new ProductList());
-            }
-        }        
 
         private void ValidateInput(EndpointModel newSettings)
         {

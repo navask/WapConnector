@@ -34,6 +34,12 @@
             KeyPath="yes"
             Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.dll" />
     </Component>
+    <Component Id="A_HybridCloud.AdminApiClient.dll"
+               Guid="{D02AD681-4F6E-4A84-BC99-2FA9E1B84CA3}">
+      <File Id="A_HybridCloud.AdminApiClient.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminApiClient.dll" />
+    </Component>
   </DirectoryRef>
   <DirectoryRef Id="AdminSiteContentExtDir">
     <Component Id="A_extensions.data.js"
@@ -144,6 +150,7 @@
   <ComponentGroup Id="AdminSiteContent">
     <ComponentRef Id="A_Microsoft.WAP.ResourceProvider.HybridCloud.AdminExtension.dll" />
     <ComponentRef Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll" />
+    <ComponentRef Id="A_HybridCloud.AdminApiClient.dll" />
     <ComponentRef Id="A_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common.dll" />
     <ComponentRef Id="A_Microsoft.WindowsAzurePack.ResourceProvider.dll" />
     <ComponentRef Id="A_extensions.data.js" />

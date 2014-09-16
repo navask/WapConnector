@@ -16,13 +16,13 @@
   <?endif?>
 
   <!-- AssemblyFileVersion -->
-  <?define FileVersion=!(bind.fileVersion.Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Api.dll) ?>
+  <!--<?define FileVersion=!(bind.fileVersion.Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll) ?>-->
 
   <!-- Required Properties -->
   <?define ProductCode="919F5558-B953-4909-BA7C-20D763A4A540" ?>
 
   <?define ProductName="Windows Azure Pack: Hybrid Cloud Sample" ?>
-  <?define ProductVersion="$(var.FileVersion)" ?>
+  <?define ProductVersion="1.0.0.0" ?>
   <?define ProductLanguage="1033" ?>
   <?define Manufacturer="Schakra Inc" ?>
   <?define UpgradeCode="9C092BBC-229D-47A4-B5BB-4E11919B6847" ?>
@@ -119,8 +119,6 @@
 
     <?include Feature\AdminSite.wxi ?>
     <?include Feature\TenantSite.wxi ?>
-    <?include Service\WebSite.wxi ?>
-    <?include Service\WebSiteContent.wxi ?>
     
     <!-- UI -->
     <Property Id="WIXUI_INSTALLDIR"
@@ -156,14 +154,6 @@
                AllowAdvertise="no"
                Level="1">
         <ComponentGroupRef Id="TenantSiteContent" />
-      </Feature>
-      <Feature Id="ServiceFeature"
-               Title="MgmtSvc-HybridCloud Backend Service"
-               Description="Installs MgmtSvc-HybridCloud Backend Service"
-               AllowAdvertise="no"
-               Level="1">
-        <ComponentRef Id="WebSite" />
-        <ComponentGroupRef Id="WebSiteContent" />
       </Feature>
     </Feature>
 

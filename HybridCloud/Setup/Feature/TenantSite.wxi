@@ -28,6 +28,12 @@
             KeyPath="yes"
             Source="$(var.TenantExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common.dll" />
     </Component>
+    <Component Id="A_HybridCloud.TenantApiClient.dll"
+               Guid="{D67ADC36-B619-40F0-8D95-9CC37D58CA27}">
+      <File Id="A_HybridCloud.TenantApiClient.dll"
+            KeyPath="yes"
+            Source="$(var.TenantExtensionTargetDir)\Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.TenantApiClient.dll" />
+    </Component>
   </DirectoryRef>
   <DirectoryRef Id="TenantSiteContentExtDir">
     <Component Id="T_extensions.data.js"
@@ -147,6 +153,7 @@
   <ComponentGroup Id="TenantSiteContent">
     <ComponentRef Id="T_Microsoft.WAP.ResourceProvider.HybridCloud.TenantExtension.dll" />
     <ComponentRef Id="T_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll" />
+    <ComponentRef Id="A_HybridCloud.TenantApiClient.dll" />
     <ComponentRef Id="T_Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Common.dll" />
     <ComponentRef Id="T_extensions.data.js" />
     <ComponentRef Id="T_HybridCloudTenant.png" />

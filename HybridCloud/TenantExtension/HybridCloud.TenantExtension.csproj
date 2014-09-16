@@ -130,7 +130,7 @@
     <Compile Include="BearerMessageProcessingHandler.cs" />
     <Compile Include="ClientFactory.cs" />
     <Compile Include="Controllers\HybridCloudTenantController.cs" />
-    <Compile Include="Models\FileShareModel.cs" />
+    <Compile Include="Models\VirtualMachineDashboardModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicAzureUtil.cs" />
     <Compile Include="PublicAzureVMOperation.cs" />
@@ -173,6 +173,10 @@
     <ProjectReference Include="..\Common\HybridCloud.Common.csproj">
       <Project>{8ee756c0-a570-4749-a25d-97d5320ca0a8}</Project>
       <Name>HybridCloud.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TenantApiClient\HybridCloud.TenantApiClient.csproj">
+      <Project>{6963c408-0426-46a1-92ef-685d7412c01e}</Project>
+      <Name>HybridCloud.TenantApiClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -83,8 +83,6 @@
     <Compile Include="ClientFactory.cs" />
     <Compile Include="Controllers\HybridCloudAdminController.cs" />
     <Compile Include="Models\EndpointModel.cs" />
-    <Compile Include="Models\FileServer.Model.cs" />
-    <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +106,10 @@
     <ProjectReference Include="..\..\ApiClients\Microsoft.WindowsAzurePack.ResourceProvider.csproj">
       <Project>{8d180247-add6-4fb4-bb98-9f2b9f3ebd6e}</Project>
       <Name>Microsoft.WindowsAzurePack.ResourceProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdminApiClient\HybridCloud.AdminApiClient.csproj">
+      <Project>{6bb12729-0502-4bcd-97d1-305320f97001}</Project>
+      <Name>HybridCloud.AdminApiClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\ApiClient\HybridCloud.ApiClient.csproj">
       <Project>{cc16eeda-663b-4e41-8047-0aaed4a03680}</Project>

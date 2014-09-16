@@ -3,8 +3,9 @@
 // ---------------------------------------------------------
 
 using System.Runtime.Serialization;
+using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient;
 
-namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.DataContracts
+namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminApiClient.DataContracts
 {
     /// <summary>
     /// AdminSettings define data contract of Hybrid Cloud resource provider endpoint registration information

@@ -5,7 +5,7 @@
 using System;
 using System.Globalization;
 using Microsoft.WindowsAzurePack.ResourceProvider.DataContracts;
-using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient;
+using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminApiClient;
 
 namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminExtension.Models
 {   
@@ -70,7 +70,7 @@ namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminExtension
                 AuthenticationMode = AuthenticationMode.Basic,
                 AuthenticationUsername = this.Username,
                 AuthenticationPassword = this.Password,
-                SourceUriTemplate = string.Format(CultureInfo.InvariantCulture, "{{subid}}/services/{0}/{{*path}}", HybridCloudClient.RegisteredServiceName),
+                SourceUriTemplate = string.Format(CultureInfo.InvariantCulture, "{{subid}}/services/{0}/{{*path}}", HybridCloudAdminClient.RegisteredServiceName),
                 TargetUriTemplate = "subscriptions/{subid}/{*path}"
             };
         }

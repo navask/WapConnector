@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCloud.Common", "Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCloud.ApiClient", "ApiClient\HybridCloud.ApiClient.csproj", "{CC16EEDA-663B-4E41-8047-0AAED4A03680}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCloud.Api", "Api\HybridCloud.Api.csproj", "{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCloud.TenantExtension", "TenantExtension\HybridCloud.TenantExtension.csproj", "{FD2B705E-7262-4BB6-871B-B9C7845C6C06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{F2E5A35A-FB2B-44EE-BA72-E2248ED52749}"
@@ -22,7 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", 
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "HybridCloud.Setup", "Setup\HybridCloud.Setup.wixproj", "{7011F83A-8D0C-4302-BDC3-D7195C1094A7}"
 	ProjectSection(ProjectDependencies) = postProject
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D} = {F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}
 		{FD2B705E-7262-4BB6-871B-B9C7845C6C06} = {FD2B705E-7262-4BB6-871B-B9C7845C6C06}
 		{ADB067C9-C4FE-483C-BA6C-6C06FAD70116} = {ADB067C9-C4FE-483C-BA6C-6C06FAD70116}
 	EndProjectSection
@@ -40,6 +37,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CF297D
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCloud.AdminApiClient", "AdminApiClient\HybridCloud.AdminApiClient.csproj", "{6BB12729-0502-4BCD-97D1-305320F97001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCloud.TenantApiClient", "TenantApiClient\HybridCloud.TenantApiClient.csproj", "{6963C408-0426-46A1-92EF-685D7412C01E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,17 +85,6 @@ Global
 		{CC16EEDA-663B-4E41-8047-0AAED4A03680}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{CC16EEDA-663B-4E41-8047-0AAED4A03680}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CC16EEDA-663B-4E41-8047-0AAED4A03680}.Release|x64.ActiveCfg = Release|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Debug|x64.Build.0 = Debug|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{F66D9400-FB56-48D4-8DA3-C9AE59AD9E0D}.Release|x64.ActiveCfg = Release|Any CPU
 		{FD2B705E-7262-4BB6-871B-B9C7845C6C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD2B705E-7262-4BB6-871B-B9C7845C6C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD2B705E-7262-4BB6-871B-B9C7845C6C06}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -128,6 +118,26 @@ Global
 		{8D180247-ADD6-4FB4-BB98-9F2B9F3EBD6E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8D180247-ADD6-4FB4-BB98-9F2B9F3EBD6E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8D180247-ADD6-4FB4-BB98-9F2B9F3EBD6E}.Release|x64.ActiveCfg = Release|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6BB12729-0502-4BCD-97D1-305320F97001}.Release|x64.ActiveCfg = Release|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6963C408-0426-46A1-92EF-685D7412C01E}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
