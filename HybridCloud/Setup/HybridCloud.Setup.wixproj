@@ -40,6 +40,8 @@
     <Content Include="Prerequisites.wxi" />
     <Content Include="ReadMe.txt" />
     <Content Include="Registry.wxi" />
+    <Content Include="Service\WebSite.wxi" />
+    <Content Include="Service\WebSiteContent.wxi" />
     <Content Include="Upgrade.wxi" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +49,7 @@
     <Folder Include="Bitmaps" />
     <Folder Include="Documents" />
     <Folder Include="Feature" />
+    <Folder Include="Service" />
     <Folder Include="PowerShell" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +78,14 @@
     <ProjectReference Include="..\AdminExtension\HybridCloud.AdminExtension.csproj">
       <Name>HybridCloud.AdminExtension</Name>
       <Project>{adb067c9-c4fe-483c-ba6c-6c06fad70116}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\Api\HybridCloud.Api.csproj">
+      <Name>HybridCloud.Api</Name>
+      <Project>{f66d9400-fb56-48d4-8da3-c9ae59ad9e0d}</Project>
       <Private>True</Private>
       <DoNotHarvest>True</DoNotHarvest>
       <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>

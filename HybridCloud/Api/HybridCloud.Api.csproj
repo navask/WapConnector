@@ -100,12 +100,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminSettingsController.cs" />
-    <Compile Include="Controllers\FileServersController.cs" />
-    <Compile Include="Controllers\FileShareController.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\QuotaController.cs" />
-    <Compile Include="Controllers\SubscriptionsController.cs" />
-    <Compile Include="Controllers\UsageController.cs" />
     <Compile Include="ErrorMessages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,9 +138,17 @@
       <Project>{8d180247-add6-4fb4-bb98-9f2b9f3ebd6e}</Project>
       <Name>Microsoft.WindowsAzurePack.ResourceProvider</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AdminApiClient\HybridCloud.AdminApiClient.csproj">
+      <Project>{6bb12729-0502-4bcd-97d1-305320f97001}</Project>
+      <Name>HybridCloud.AdminApiClient</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ApiClient\HybridCloud.ApiClient.csproj">
       <Project>{cc16eeda-663b-4e41-8047-0aaed4a03680}</Project>
       <Name>HybridCloud.ApiClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TenantApiClient\HybridCloud.TenantApiClient.csproj">
+      <Project>{6963c408-0426-46a1-92ef-685d7412c01e}</Project>
+      <Name>HybridCloud.TenantApiClient</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

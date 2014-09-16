@@ -16,7 +16,7 @@
   <?endif?>
 
   <!-- AssemblyFileVersion -->
-  <!--<?define FileVersion=!(bind.fileVersion.Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.dll) ?>-->
+  <?define FileVersion=!(bind.fileVersion.Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Api.dll) ?>
 
   <!-- Required Properties -->
   <?define ProductCode="919F5558-B953-4909-BA7C-20D763A4A540" ?>
@@ -119,6 +119,8 @@
 
     <?include Feature\AdminSite.wxi ?>
     <?include Feature\TenantSite.wxi ?>
+    <?include Service\WebSite.wxi ?>
+    <?include Service\WebSiteContent.wxi ?>
     
     <!-- UI -->
     <Property Id="WIXUI_INSTALLDIR"
@@ -154,6 +156,14 @@
                AllowAdvertise="no"
                Level="1">
         <ComponentGroupRef Id="TenantSiteContent" />
+      </Feature>
+      <Feature Id="ServiceFeature"
+               Title="MgmtSvc-HybridCloud Backend Service"
+               Description="Installs MgmtSvc-HybridCloud Backend Service"
+               AllowAdvertise="no"
+               Level="1">
+        <ComponentRef Id="WebSite" />
+        <ComponentGroupRef Id="WebSiteContent" />
       </Feature>
     </Feature>
 

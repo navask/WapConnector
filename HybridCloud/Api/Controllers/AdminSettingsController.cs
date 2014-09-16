@@ -4,6 +4,7 @@
 
 using System;
 using System.Web.Http;
+using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.AdminApiClient.DataContracts;
 using Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.ApiClient.DataContracts;
 
 namespace Microsoft.WindowsAzurePack.ResourceProvider.HybridCloud.Api.Controllers
